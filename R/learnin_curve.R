@@ -1,4 +1,4 @@
-learning_ui <- function(id) {
+learnin_curve_ui <- function(id) {
   ns <- NS(id)
   tagList(
     sliderInput(ns("L"), "Learning Curve", 0.6, 0.99, 0.8),
@@ -6,7 +6,7 @@ learning_ui <- function(id) {
   )
 }
 
-learning_server <- function(id) {
+learnin_curve_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     output$grafik <- renderPlot({
       b <- -log(input$L) / log(2)
